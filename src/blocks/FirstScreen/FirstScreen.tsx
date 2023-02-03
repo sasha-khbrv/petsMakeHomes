@@ -1,7 +1,26 @@
 import { FC } from "react";
+import ShareIcon from "../../components/icons/ShareIcon";
+import styles from "./FirstScreen.module.scss";
 
 const FirstScreen: FC = () => {
-  return <div>FirstScreen</div>;
+  return (
+    <div className={styles.wrapper}>
+      <div>
+        <div>Festival of homeless animals</div>
+        <a>Loft Project "Etagi"</a>
+      </div>
+      <div>
+        <h1>
+          <span>Pets make homes</span>
+          <span>23—24.09</span>
+        </h1>
+        <button>
+          Tell friends <ShareIcon />
+        </button>
+      </div>
+      <img src="src/assets/familyPic.svg" />
+    </div>
+  );
 };
 
 export default FirstScreen;
