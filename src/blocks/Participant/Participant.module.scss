@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-auto-columns: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "dogImg title title"
+    "dogImg description description"
+    "dogImg participant0 participant1"
+    "participant3 participant4 catImg"
+    "participant5 participant6 catImg"
+    ". . catImg";
+}
+
+.dogImg {
+  grid-area: dogImg;
+}
+
+.catImg {
+  grid-area: catImg;
+}
+
+.title {
+  grid-area: title;
+}
+
+.description {
+  grid-area: description;
+}
+
+.participant0 {
+  grid-area: participant0;
+}
+
+.participant3 {
+  grid-area: participant3;
+}
+
+.participant1 {
+  grid-area: participant1;
+}
+
+.participant4 {
+  grid-area: participant4;
+}
+
+.participant5 {
+  grid-area: participant5;
+}
+
+.participant6 {
+  grid-area: participant6;
+}
