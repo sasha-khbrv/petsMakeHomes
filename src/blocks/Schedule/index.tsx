@@ -59,7 +59,7 @@ const SCHEDULE_MAP: Array<ScheduleItem> = [
   {
     time: "10.30 - 19.00",
     desctription: "Expert consultation",
-    icon: "consultations",
+    icon: "consultation",
     isActive: false,
   },
   {

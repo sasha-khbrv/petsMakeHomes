@@ -6,10 +6,6 @@ const FirstScreen: FC = () => {
   return (
     <div className={styles.wrapper}>
       <div>
-        <div>Festival of homeless animals</div>
-        <a>Loft Project "Etagi"</a>
-      </div>
-      <div>
         <h1>
           <span>Pets make homes</span>
           <span>23—24.09</span>

@@ -1,7 +1,7 @@
 import { FC } from "react";
-import styles from "./Participant.module.scss";
+import styles from "./Participants.module.scss";
 
-const Participant: FC = () => {
+const Participants: FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.dogImg}></div>
@@ -18,7 +18,7 @@ const Participant: FC = () => {
   );
 };
 
-export default Participant;
+export default Participants;
 
 const PartisipantsItem: FC<{ item: ParticipantBlock; i: number }> = ({
   item,
