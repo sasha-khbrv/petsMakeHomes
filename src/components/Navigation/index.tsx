@@ -8,6 +8,7 @@ const Navigation: FC = () => {
     </nav>
   );
 };
+
 export default Navigation;
 
 const NAV_MAP: Array<{ id: string; title: string }> = [
