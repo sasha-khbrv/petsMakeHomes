@@ -1,11 +1,33 @@
-import { FC } from "react";
+import { FC, useState } from "react";
+import BlankButton from "../buttons/BlankButton";
+import CloseMenuIcon from "../icons/CloseMenuIcon";
+import MenuIcon from "../icons/MenuIcon";
+import styles from "./Navigation.module.scss";
 
 const Navigation: FC = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
-    <nav>
-      <div>Festival of homeless animals</div>
-      <div>{NAV_MAP.map(item => <span>{item.title}</span>)}</div>
-    </nav>
+    <header className={styles.wrapper}>
+      <div className={styles.headerLine}>
+        <p>Festival of homeless animals</p>
+        <p>Loft Project "Etagi"</p>
+        <BlankButton
+          onClick={() => setShowMenu((prev) => !prev)}
+          className={styles.menuIcon}
+        >
+          {/* TODO: Add animation to icon */}
+          {showMenu ? <CloseMenuIcon /> : <MenuIcon />}
+        </BlankButton>
+      </div>
+
+      {showMenu && (
+        <nav className={styles.menu}>
+          {NAV_MAP.map((item) => (
+            <a>{item.title}</a>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 };
 

@@ -1,6 +1,8 @@
 import { FC } from "react";
+import { FONT_PRIMARY } from "../../helpers/consts";
+import { IconProps } from "./types";
 
-const ShareIcon: FC = () => {
+const ShareIcon: FC<IconProps> = ({ color = FONT_PRIMARY }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
       <path
@@ -21,7 +23,7 @@ const ShareIcon: FC = () => {
         />
       </mask>
       <g mask="url(#a)">
-        <path fill="#4E5165" d="M1 0h32v32H1z" />
+        <path fill={color} d="M1 0h32v32H1z" />
       </g>
     </svg>
   );

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import BlankButton from "../../components/buttons/BlankButton";
 import ShareIcon from "../../components/icons/ShareIcon";
 import styles from "./FirstScreen.module.scss";
 

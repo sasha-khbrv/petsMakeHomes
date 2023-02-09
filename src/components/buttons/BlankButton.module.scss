@@ -3,16 +3,16 @@
   background: none;
   cursor: pointer;
   border: none;
-  font-size: 14px;
-  color: var(--grey-font);
+  padding: none;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: unset;
 
   &:disabled,
   .disabled {
     cursor: not-allowed;
+    pointer-events: none;
   }
 }
