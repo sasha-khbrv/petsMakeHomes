@@ -10,6 +10,9 @@
   justify-content: center;
   text-decoration: none;
 
+  width: 16rem;
+  height: 3rem;
+
   &:disabled,
   .disabled {
     cursor: not-allowed;

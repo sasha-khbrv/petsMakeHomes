@@ -14,22 +14,26 @@
   --font-primary: #383a48;
   --font-secondary: #646882;
   --green: #7fd6c2;
-  --darker-green: #79c7b6;
+  --green-darker: #79c7b6;
   --pink: #e0719e;
-  --darker-pink: #d06c96;
+  --pink-darker: #d06c96;
   --yellow: #f6e049;
-  --darker-yellow: #e4d049;
+  --yellow-darker: #e4d049;
   --blue: #aac6fc;
-  --darker-blue: #9fb9ea;
+  --blue-darker: #9fb9ea;
   --biege: #f3f6e6;
   --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
-  max-width: 1440px;
   background-color: var(--white);
 
   // Basic fonts

@@ -2,8 +2,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: fixed;
   background-color: var(--white);
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 $headerLineHeight: 3rem;
@@ -14,6 +17,7 @@ $headerLineHeight: 3rem;
   justify-content: space-between;
   height: $headerLineHeight;
   font-weight: 800;
+  color: var(--font-primary);
 
   & > :nth-child(1) {
     order: 1;
