@@ -1,0 +1,19 @@
+@import "src/helpers/mixins.scss";
+
+.wrapper {
+  @include contentBlock;
+  margin-bottom: 15rem;
+}
+
+.heading {
+  margin-bottom: 6.5rem;
+}
+
+.cardsWrapper {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+}

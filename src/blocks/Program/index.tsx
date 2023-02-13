@@ -1,33 +1,23 @@
 import { FC } from "react";
+import Card from "../../components/Card/Card";
+import styles from "./Program.module.scss";
 
 const Program: FC = () => {
   return (
-    <div>
-      <h2>What awaits you</h2>
-      <div>{PROGRAM_MAP.map(item => <ProgramBlock item={item}/>)}</div>
+    <div className={styles.wrapper}>
+      <h2 className={styles.heading}>What awaits you</h2>
+      <div className={styles.cardsWrapper}>
+        {PROGRAM_MAP.map((item) => (
+          <Card {...item} />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Program;
 
-const ProgramBlock: FC<{ item: ProgramBlock }> = ({ item }) => {
-  return (
-    <div>
-      <img src={`src/assets/program/${item.id}.svg`} alt={item.alt} />
-      <h3>{item.title}</h3>
-      
-    </div>
-  );
-};
-
-type ProgramBlock = {
-  id: string;
-  title: string;
-  alt: string;
-};
-
-const PROGRAM_MAP: Array<ProgramBlock> = [
+const PROGRAM_MAP = [
   {
     id: "pets",
     title: "Dogs and cats looking for a family",
