@@ -1,0 +1,24 @@
+@import "src/helpers/mixins";
+
+.wrapper {
+  @include centeredColumn;
+  box-shadow: var(--basic-shadow);
+  border-radius: 4px;
+  background-color: var(--white);
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all ease-in-out 0.6s;
+
+  &:hover {
+    transition: all ease-in-out 0.4s;
+    box-shadow: var(--basic-shadow-hover);
+  }
+}
+
+$iconSize: 6rem;
+.icon {
+  width: $iconSize;
+  height: $iconSize;
+  margin-bottom: 1.25rem;
+}

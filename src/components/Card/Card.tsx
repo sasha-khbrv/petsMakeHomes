@@ -9,8 +9,8 @@ export type Props = {
 
 const Card: FC<Props> = ({ id, title, alt }) => {
   return (
-    <div>
-      <img src={`src/assets/program/${id}.svg`} alt={alt} />
+    <div className={styles.wrapper}>
+      <img src={`src/assets/program/${id}.svg`} alt={alt} className={styles.icon}/>
       {title && <h3>{title}</h3>}
     </div>
   );
