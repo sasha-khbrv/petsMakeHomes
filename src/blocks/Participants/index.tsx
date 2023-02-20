@@ -4,8 +4,6 @@ import styles from "./Participants.module.scss";
 const Participants: FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.dogImg}></div>
-      <div className={styles.catImg}></div>
       <h2 className={styles.title}>Who awaits you</h2>
       <p className={styles.description}>
         All animals are ready to go home: all the necessary vaccinations, chips
