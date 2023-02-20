@@ -1,12 +1,18 @@
 import { FC } from "react";
+import Card from "../../components/Card/Card";
+import { SPONSORS_MAP } from "./consts";
+import styles from "./Sponsors.module.scss";
 
 const Sponsors: FC = () => {
   return (
-    <div>
-      <h2>Our sponsors</h2>
-      <div>
+    <div className={styles.wrapper}>
+      <h2 className={styles.heading}>Our Sponsors</h2>
+      <div className={styles.cardsWrapper}>
         {SPONSORS_MAP.map((item) => (
-          <SponsorsBlock item={item} />
+          <Card
+            {...item}
+            imgSpecification={{ folder: "sponsors", extension: "png" }}
+          />
         ))}
       </div>
     </div>
@@ -14,60 +20,3 @@ const Sponsors: FC = () => {
 };
 
 export default Sponsors;
-
-const SponsorsBlock: FC<{ item: SponsorsBlock }> = ({ item }) => {
-  return (
-    <div>
-      <img src={`src/assets/sponsors/${item.id}.png`} alt={item.alt} />
-    </div>
-  );
-};
-
-type SponsorsBlock = {
-  id: string;
-  alt: string;
-  link: string;
-};
-
-const SPONSORS_MAP: Array<SponsorsBlock> = [
-  {
-    id: "acana",
-    alt: "Acana",
-    link: "",
-  },
-  {
-    id: "almo",
-    alt: "Almo Nature",
-    link: "",
-  },
-  {
-    id: "barkingHeads",
-    alt: "Barking Heads",
-    link: "",
-  },
-  {
-    id: "eukanuba",
-    alt: "Eukanuba",
-    link: "",
-  },
-  {
-    id: "now",
-    alt: "Now",
-    link: "",
-  },
-  {
-    id: "petshop",
-    alt: "Petshop",
-    link: "",
-  },
-  {
-    id: "pronature",
-    alt: "Pronature",
-    link: "",
-  },
-  {
-    id: "royalCanin",
-    alt: "Royal Canin",
-    link: "",
-  },
-];

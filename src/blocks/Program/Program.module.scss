@@ -15,3 +15,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem 2rem;
 }
+
+$iconSize: 6rem;
+.icon {
+  width: $iconSize;
+  height: $iconSize;
+  margin-bottom: 1.25rem;
+}

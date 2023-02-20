@@ -1,0 +1,17 @@
+@import "src/helpers/mixins.scss";
+
+.wrapper {
+  @include contentBlock;
+  margin-bottom: 15rem;
+}
+
+.heading {
+  margin-bottom: 6.5rem;
+}
+
+.cardsWrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 2rem;
+}
