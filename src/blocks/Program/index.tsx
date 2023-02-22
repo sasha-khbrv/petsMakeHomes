@@ -10,6 +10,7 @@ const Program: FC = () => {
       <div className={styles.cardsWrapper}>
         {PROGRAM_MAP.map((item) => (
           <Card
+            key={item.id}
             {...item}
             imgSpecification={{ folder: "program", extension: "svg" }}
             imgClassName={styles.icon}

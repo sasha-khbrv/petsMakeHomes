@@ -9,8 +9,15 @@ type Props = {
   disabled?: boolean;
   isSecondary?: boolean;
   children?: React.ReactNode;
+  onHover?: (arg: boolean) => void;
 };
-const BlankButton: FC<Props> = ({ className, disabled, onClick, children }) => {
+const BlankButton: FC<Props> = ({
+  className,
+  disabled,
+  onClick,
+  children,
+  onHover = () => undefined,
+}) => {
   return (
     <button
       className={classNames(
@@ -19,6 +26,8 @@ const BlankButton: FC<Props> = ({ className, disabled, onClick, children }) => {
         disabled && styles.disabled
       )}
       onClick={onClick}
+      onMouseEnter={() => onHover(true)}
+      onMouseLeave={() => onHover(false)}
       type="button"
       disabled={disabled}
     >

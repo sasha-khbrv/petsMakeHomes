@@ -22,8 +22,8 @@ const Navigation: FC = () => {
 
       {showMenu && (
         <nav className={styles.menu}>
-          {NAV_MAP.map((item) => (
-            <a>{item.title}</a>
+          {NAV_MAP.map((item, i) => (
+            <a key={item.title + i}>{item.title}</a>
           ))}
         </nav>
       )}

@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  transform: rotateY(0deg);
+
+  &.collapsed {
+    transform: rotateY(180deg);
+  }
+}

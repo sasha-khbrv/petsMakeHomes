@@ -10,7 +10,7 @@ const Participants: FC = () => {
         and passports are made, and all the animals are neutered and sterilized.
       </p>
       {PARTICIPANTS_MAP.map((item, i) => (
-        <PartisipantsItem item={item} i={i} />
+        <PartisipantsItem item={item} i={i} key={item.title + i} />
       ))}
     </div>
   );

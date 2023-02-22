@@ -1,0 +1,17 @@
+@import "src/helpers/mixins.scss";
+
+.wrapper {
+  display: grid;
+  align-items: center;
+  column-gap: 2rem;
+  grid-template-columns: repeat(2, 16rem);
+  margin: 4.5rem 0 6rem;
+
+  .activeBtn {
+    @include filledButton(var(--green), var(--white));
+  }
+
+  .basicBtn {
+    @include outlineButton(var(--green));
+  }
+}

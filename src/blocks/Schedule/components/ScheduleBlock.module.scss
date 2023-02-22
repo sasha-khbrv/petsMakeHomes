@@ -1,0 +1,23 @@
+.wrapper {
+  border-top: var(--basic-border);
+  border-bottom: var(--basic-border);
+  display:flex;
+  flex-direction: column;
+}
+
+.cell {
+  height: 9.5rem;
+  width: 100%;
+  padding: 4rem 6.5rem;
+}
+
+.toggle {
+  @extend .cell;
+  color: var(--green);
+  justify-content: flex-start;
+
+  &:hover{
+  color: var(--green-darker);
+
+  }
+}

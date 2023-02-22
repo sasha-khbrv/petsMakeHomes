@@ -1,77 +1,27 @@
-import { FC } from "react";
-import ArrowIcon from "../../components/icons/ArrowIcon";
+import { FC, useState } from "react";
+import Tabs from "../../components/Tabs/Tabs";
+import ScheduleBlock from "./components/ScheduleBlock";
+import { SCHEDULE_DAY_MAP } from "./consts";
+import styles from "./Schedule.module.scss";
 
 const Schedule: FC = () => {
+  const [activeDay, setActiveDay] = useState(SCHEDULE_DAY_MAP[0]);
   return (
-    <div>
-      <h2>Schedule </h2>
-      <div>
-        <button>September 23</button>
-        <button>September 24</button>
-      </div>
-      <ScheduleBlock />
+    <div className={styles.wrapper}>
+      <h2>Schedule</h2>
+      <Tabs
+        className={styles.tabs}
+        list={SCHEDULE_DAY_MAP}
+        onClick={setActiveDay}
+        activeTab={activeDay}
+      />
+      <ScheduleBlock activeDay={activeDay.id} />
     </div>
   );
 };
 
 export default Schedule;
 
-const ScheduleBlock: FC = () => {
-  return (
-    <div>
-      {SCHEDULE_MAP.map((item) => (
-        <ScheduleItem item={item} />
-      ))}
-      <div>
-        Full schedule <ArrowIcon />
-      </div>
-    </div>
-  );
-};
-const ScheduleItem: FC<{ item: ScheduleItem }> = ({ item }) => {
-  return (
-    <div>
-      <div>{item.time}</div>
-      <div>{item.desctription}</div>
-      <img src={`src/assets/program/${item.icon}.svg`} />
-    </div>
-  );
-};
-type ScheduleItem = {
-  time: string;
-  desctription: string;
-  icon: string;
-  isActive: boolean;
-};
-const SCHEDULE_MAP: Array<ScheduleItem> = [
-  {
-    time: "10.00",
-    desctription: "Opening. Rules and wishes",
-    icon: "pets",
-    isActive: false,
-  },
-  {
-    time: "10.30 - 19.00",
-    desctription: "Exhibition of homeless animals",
-    icon: "pets",
-    isActive: false,
-  },
-  {
-    time: "10.30 - 19.00",
-    desctription: "Expert consultation",
-    icon: "consultation",
-    isActive: false,
-  },
-  {
-    time: "12:00 — 13:00",
-    desctription: "Lecture 'A dog from a shelter. How to prepare'",
-    icon: "lectures",
-    isActive: false,
-  },
-  {
-    time: "13:30 — 15:30",
-    desctription: "Auction in favor of shelters",
-    icon: "pets",
-    isActive: false,
-  },
-];
+
+
+

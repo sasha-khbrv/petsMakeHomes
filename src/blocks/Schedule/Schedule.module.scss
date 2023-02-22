@@ -1,0 +1,10 @@
+@import "src/helpers/mixins.scss";
+
+.wrapper {
+  @include contentBlock;
+  margin-bottom: 15rem;
+}
+
+.tabs {
+  margin: 4.5rem 0 6rem;
+}
