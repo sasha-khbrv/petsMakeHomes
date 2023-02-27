@@ -1,10 +1,8 @@
 import React, { FC, useMemo, useState } from "react";
-import BlankButton from "../../../components/buttons/BlankButton";
-import ArrowIcon from "../../../components/icons/ArrowIcon";
-import { SCHEDULE_MAP } from "../consts";
+import { SCHEDULE_MAP } from "../../consts";
 import styles from "./ScheduleBlock.module.scss";
-import ScheduleBtn from "./ScheduleBtn";
-import ScheduleItem from "./ScheduleItem";
+import ScheduleBtn from "../ScheduleBtn";
+import ScheduleItem from "../ScheduleItem";
 
 type Props = { activeDay: string };
 

@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import Tabs from "../../components/Tabs/Tabs";
+import Tabs from "../../components/Tabs";
 import ScheduleBlock from "./components/ScheduleBlock";
 import { SCHEDULE_DAY_MAP } from "./consts";
 import styles from "./Schedule.module.scss";

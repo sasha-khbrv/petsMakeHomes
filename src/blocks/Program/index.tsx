@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Card from "../../components/Card/Card";
+import Card from "../../components/Card";
 import { PROGRAM_MAP } from "./consts";
 import styles from "./Program.module.scss";
 

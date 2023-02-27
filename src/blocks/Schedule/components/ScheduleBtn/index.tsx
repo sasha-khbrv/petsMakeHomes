@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
-import BlankButton from "../../../components/buttons/BlankButton";
-import ArrowIcon from "../../../components/icons/ArrowIcon";
-import { classNames } from "../../../helpers/classNames";
-import { GREEN, GREEN_DARKER } from "../../../helpers/consts";
+import BlankButton from "../../../../components/buttons/BlankButton";
+import ArrowIcon from "../../../../components/icons/ArrowIcon";
+import { classNames } from "../../../../helpers/classNames";
+import { GREEN, GREEN_DARKER } from "../../../../helpers/consts";
 import styles from "./ScheduleBtn.module.scss";
 
 type Props = {

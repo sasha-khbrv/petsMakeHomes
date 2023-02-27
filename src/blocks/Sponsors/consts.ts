@@ -1,4 +1,4 @@
-import { CardType } from "../../components/Card/Card";
+import { CardType } from "../../components/Card";
 
 export const SPONSORS_MAP: Array<CardType> = [
   {

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { classNames } from "../../../helpers/classNames";
+import { classNames } from "../../../../helpers/classNames";
 import styles from "./ScheduleItem.module.scss";
 
 export type ScheduleItem = {
