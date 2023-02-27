@@ -17,7 +17,7 @@ const ScheduleBlock: FC<Props> = ({ activeDay }) => {
       : SCHEDULE_MAP[activeDay].filter((item, i) => i <= 2);
 
     return newList.map((item, i) => (
-      <ScheduleItem item={item} key={item.time + i} />
+      <ScheduleItem item={item} key={item.time + i} className={styles.cell} />
     ));
   }, [activeDay, showAll]);
 

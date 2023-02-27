@@ -19,11 +19,10 @@ const ScheduleBtn: FC<Props> = ({ onToggle, showAll, className }) => {
       className={classNames(styles.wrapper, className)}
       onHover={setIsHover}
     >
-      <span>Full schedule</span>
-      <ArrowIcon
-        color={isHover ? GREEN_DARKER : GREEN}
-        className={classNames(styles.arrow, showAll && styles.collapsed)}
-      />
+      <span>{showAll ? "Hide schedule" : "Show schedule"}</span>
+      <span className={classNames(styles.arrow, showAll && styles.collapsed)}>
+        <ArrowIcon color={isHover ? GREEN_DARKER : GREEN} />
+      </span>
     </BlankButton>
   );
 };

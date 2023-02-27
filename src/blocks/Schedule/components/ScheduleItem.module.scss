@@ -1,0 +1,38 @@
+.wrapper {
+  display: grid;
+  column-gap: 2rem;
+  align-items: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: var(--basic-border);
+
+  &:hover {
+    background-color: var(--pink);
+    .time, .descr {
+      color: var(--white);
+    }
+    .icon {
+      opacity: 1;
+    }
+  }
+}
+
+.time {
+  grid-column: 2 / 6;
+  font-weight: 800;
+  color: var(--font-primary);
+}
+
+.descr {
+  grid-column: 6 / 11;
+  font-weight: 400;
+  color: var(--font-secondaryy);
+}
+
+.icon {
+  grid-column: 11 / 12;
+  opacity: 0;
+  height: 5.5rem;
+}

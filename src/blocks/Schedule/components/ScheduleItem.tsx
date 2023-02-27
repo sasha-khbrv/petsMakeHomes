@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { classNames } from "../../../helpers/classNames";
 import styles from "./ScheduleItem.module.scss";
 
 export type ScheduleItem = {
@@ -9,12 +10,17 @@ export type ScheduleItem = {
   parent: string;
 };
 
-const ScheduleItem: FC<{ item: ScheduleItem }> = ({ item }) => {
+type Props = { className?: string; item: ScheduleItem };
+
+const ScheduleItem: FC<Props> = ({ item, className }) => {
   return (
-    <div>
-      <div>{item.time}</div>
-      <div>{item.desctription}</div>
-      <img src={`src/assets/program/${item.icon}.svg`} />
+    <div className={classNames(styles.wrapper, className)}>
+      <div className={styles.time}>{item.time}</div>
+      <div className={styles.descr}>{item.desctription}</div>
+      <img
+        src={`src/assets/program/${item.icon}.svg`}
+        className={styles.icon}
+      />
     </div>
   );
 };

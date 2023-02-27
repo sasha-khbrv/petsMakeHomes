@@ -5,9 +5,14 @@
 
 .arrow {
   margin-left: 0.5rem;
-  transform: rotateY(0deg);
+  margin-top: 2px;
+  transform: rotate(0deg);
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
 
   &.collapsed {
-    transform: rotateY(180deg);
+    transform: rotate(180deg);
   }
 }
