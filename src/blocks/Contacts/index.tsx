@@ -1,4 +1,5 @@
 import { FC } from "react";
+import IconButton from "../../components/buttons/IconButton";
 import Footer from "../../components/Footer";
 import FbIcon from "../../components/icons/socialMedia/FbIcon";
 import InstaIcon from "../../components/icons/socialMedia/InstaIcon";
@@ -11,7 +12,7 @@ const Contacts: FC = () => {
       <h2 className={styles.title}>How to find us</h2>
       <div className={styles.address}>
         <h3>Adress</h3>
-        <span>Ligovsky Ave., 74, 2nd floor, sspanace Blue floor</span>
+        <span>Ligovsky Ave., 74, 2nd floor, space Blue floor</span>
       </div>
       <div className={styles.contacts}>
         <h3>Contacts</h3>
@@ -19,11 +20,11 @@ const Contacts: FC = () => {
         <span>info@homesweethome.com</span>
       </div>
       <div className={styles.social}>
-        <FbIcon />
-        <InstaIcon />
-        <TwitterIcon />
+        <IconButton onClick={() => undefined} Icon={FbIcon}/>
+        <IconButton onClick={() => undefined} Icon={InstaIcon}/>
+        <IconButton onClick={() => undefined} Icon={TwitterIcon}/>
       </div>
-      <Footer className={styles.footer}/>
+      <Footer className={styles.footer} />
     </div>
   );
 };

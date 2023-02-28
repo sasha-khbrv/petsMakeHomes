@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.link {
+  color: var(--font-primary);
+  &:hover {
+    color: var(--green);
+  }
+}
+
+.icon {
+  margin-left: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
