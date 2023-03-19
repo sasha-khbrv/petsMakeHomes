@@ -20,5 +20,8 @@
   .disabled {
     cursor: not-allowed;
     pointer-events: none;
+    background-color: var(--font-secondary);
+    border-color: var(--font-secondary);
+    opacity: 0.4;
   }
 }

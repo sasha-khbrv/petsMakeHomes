@@ -1,0 +1,15 @@
+.cell {
+  height: 9.5rem;
+  width: 100%;
+  padding: 2rem 6.5rem;
+  box-sizing: border-box;
+}
+
+.cellPlaceholder {
+  @extend .cell;
+  color: var(--font-secondary);
+  border-bottom: var(--basic-border);
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}

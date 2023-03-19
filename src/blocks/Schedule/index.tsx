@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import Tabs from "../../components/Tabs";
+import { SECTION_ID } from "../../helpers/types";
 import ScheduleBlock from "./components/ScheduleBlock";
 import { SCHEDULE_DAY_MAP } from "./consts";
 import styles from "./Schedule.module.scss";
@@ -7,7 +8,7 @@ import styles from "./Schedule.module.scss";
 const Schedule: FC = () => {
   const [activeDay, setActiveDay] = useState(SCHEDULE_DAY_MAP[0]);
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={SECTION_ID.SCHEDULE}>
       <h2>Schedule</h2>
       <Tabs
         className={styles.tabs}
@@ -21,7 +22,3 @@ const Schedule: FC = () => {
 };
 
 export default Schedule;
-
-
-
-
