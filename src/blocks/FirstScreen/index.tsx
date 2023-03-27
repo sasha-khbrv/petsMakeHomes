@@ -22,7 +22,7 @@ const FirstScreen: FC = () => {
   };
 
   return (
-    <div className={styles.wrapper} id={SECTION_ID.HOME}>
+    <section className={styles.wrapper} id={SECTION_ID.HOME}>
       <div className={styles.content}>
         <h1>
           Pets make homes
@@ -40,7 +40,7 @@ const FirstScreen: FC = () => {
       </div>
 
       <img src="src/assets/familyPic.svg" className={styles.image} />
-    </div>
+    </section>
   );
 };
 

@@ -16,6 +16,7 @@
   --green: #7fd6c2;
   --green-darker: #79c7b6;
   --pink: #e0719e;
+  --electric-blue: #4053fa;
   --pink-darker: #d06c96;
   --yellow: #f6e049;
   --yellow-darker: #e4d049;
@@ -23,7 +24,7 @@
   --blue-darker: #9fb9ea;
   --biege: #f3f6e6;
   --white: #ffffff;
-  --light-grey: #F1F2F4;
+  --light-grey: #f1f2f4;
 
   // OTHER
   --basic-shadow: 0px 10px 60px rgba(183, 186, 200, 0.4);
@@ -34,6 +35,10 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+:focus {
+  outline: 8px dotted var(--electric-blue);
 }
 
 body {

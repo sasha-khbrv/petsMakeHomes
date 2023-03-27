@@ -7,7 +7,7 @@ import styles from "./Sponsors.module.scss";
 
 const Sponsors: FC = () => {
   return (
-    <div className={styles.wrapper} id={SECTION_ID.SPONSORS}>
+    <section className={styles.wrapper} id={SECTION_ID.SPONSORS}>
       <h2 className={styles.heading}>Our Sponsors</h2>
       <div className={styles.cardsWrapper}>
         {SPONSORS_MAP.map((item, i) => (
@@ -18,7 +18,7 @@ const Sponsors: FC = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

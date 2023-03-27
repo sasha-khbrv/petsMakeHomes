@@ -7,7 +7,7 @@ import styles from "./Footer.module.scss";
 
 const Footer: FC<{ className: string }> = ({ className }) => {
   return (
-    <div className={classNames(styles.wrapper, className)}>
+    <footer className={classNames(styles.wrapper, className)}>
       <span>© 2019. Lwccts</span>
       <TextButton
         onClick={() => animateScroll.scrollToTop()}
@@ -15,7 +15,7 @@ const Footer: FC<{ className: string }> = ({ className }) => {
         Icon={ArrowIcon}
         iconClassName={styles.arrowIcon}
       />
-    </div>
+    </footer>
   );
 };
 export default Footer;

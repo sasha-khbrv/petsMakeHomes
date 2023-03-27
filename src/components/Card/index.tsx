@@ -28,11 +28,11 @@ const Card: FC<Props> = ({
         alt={alt}
         className={imgClassName}
       />
-      {title && <h3>{title}</h3>}
+      {title && <figcaption>{title}</figcaption>}
     </>
   );
   return (
-    <div className={styles.wrapper}>
+    <figure className={styles.wrapper} role="group">
       {link ? (
         <a href={link} target={"_blank"}>
           {body}
@@ -40,7 +40,7 @@ const Card: FC<Props> = ({
       ) : (
         body
       )}
-    </div>
+    </figure>
   );
 };
 

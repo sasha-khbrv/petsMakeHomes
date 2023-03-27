@@ -8,7 +8,7 @@ import styles from "./Schedule.module.scss";
 const Schedule: FC = () => {
   const [activeDay, setActiveDay] = useState(SCHEDULE_DAY_MAP[0]);
   return (
-    <div className={styles.wrapper} id={SECTION_ID.SCHEDULE}>
+    <section className={styles.wrapper} id={SECTION_ID.SCHEDULE}>
       <h2>Schedule</h2>
       <Tabs
         className={styles.tabs}
@@ -17,7 +17,7 @@ const Schedule: FC = () => {
         activeTab={activeDay}
       />
       <ScheduleBlock activeDay={activeDay.id} />
-    </div>
+    </section>
   );
 };
 

@@ -10,12 +10,14 @@ function App() {
   return (
     <>
       <Navigation />
-      <FirstScreen />
-      <Program />
-      <Participants />
-      <Schedule />
-      <Sponsors />
-      <Contacts />
+      <main>
+        <FirstScreen />
+        <Program />
+        <Participants />
+        <Schedule />
+        <Sponsors />
+        <Contacts />
+      </main>
     </>
   );
 }

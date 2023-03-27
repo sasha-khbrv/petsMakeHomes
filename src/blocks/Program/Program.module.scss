@@ -2,7 +2,7 @@
 
 .wrapper {
   @include contentBlock;
-  margin-bottom: 15rem;
+  margin: 6rem auto 12rem;
 }
 
 .heading {
@@ -14,6 +14,9 @@
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 $iconSize: 6rem;

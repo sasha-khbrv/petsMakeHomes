@@ -4,12 +4,13 @@ import { classNames } from "../../helpers/classNames";
 import styles from "./BlankButton.module.scss";
 
 type Props = {
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick: () => void;
   className?: string;
   disabled?: boolean;
   isSecondary?: boolean;
   children?: React.ReactNode;
   onHover?: (arg: boolean) => void;
+  tabIndex?: number;
 };
 const BlankButton: FC<Props> = ({
   className,
@@ -17,9 +18,17 @@ const BlankButton: FC<Props> = ({
   onClick,
   children,
   onHover = () => undefined,
+  tabIndex,
 }) => {
+  const handleKeyPress = (event: any) => {
+    if (event.key === "Enter" || event.key === " ") {
+      onClick();
+    }
+  };
   return (
     <button
+      role="button"
+      tabIndex={tabIndex}
       className={classNames(
         styles.button,
         className,
@@ -28,6 +37,7 @@ const BlankButton: FC<Props> = ({
       onClick={onClick}
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}
+      onKeyDown={handleKeyPress}
       type="button"
       disabled={disabled}
     >

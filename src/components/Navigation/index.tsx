@@ -13,6 +13,7 @@ const Navigation: FC = () => {
   return (
     <header
       className={classNames(styles.wrapper, showMenu && styles.showMenuState)}
+      role="header"
     >
       <div className={styles.headerLine}>
         <p
@@ -25,12 +26,18 @@ const Navigation: FC = () => {
         <BlankButton
           onClick={() => setShowMenu((prev) => !prev)}
           className={styles.menuIcon}
+          aria-label="Toggle menu"
+          tabIndex={0}
         >
           {showMenu ? <CloseMenuIcon /> : <MenuIcon />}
         </BlankButton>
       </div>
 
-      <nav className={classNames(styles.menu, showMenu && styles.showMenu)}>
+      <nav
+        className={classNames(styles.menu, showMenu && styles.showMenu)}
+        role="navigation"
+        aria-label="Main navigation"
+      >
         {Object.keys(NAV_MAP).map((key, i) => (
           <Link
             to={key}
